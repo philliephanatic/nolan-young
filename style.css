@@ -7,6 +7,76 @@ html, body { /* LOOK INTO DIFFERENCE */
     overflow-x: hidden;
 }
 
+/* Apply border-box universally */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER_START */
+.site-header {
+    background-color: aqua;
+    font-family: "Roboto", serif;
+    z-index: 1000;
+}
+
+.site-header-container, .logo, .logo-wrapper, .navigation, .navigation ul {
+    display: flex;
+}
+
+.logo-wrapper, .navigation {
+    padding: 1rem;
+}
+
+.logo { /* add svg image */
+    flex: nowrap;
+}
+
+.logo a, .navigation ul li a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Default link color */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.site-header-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    width: 100%;
+}
+
+.logo-wrapper {
+    align-items: center;
+}
+
+.navigation {
+    justify-content: flex-end;
+}
+
+.navigation ul {
+    list-style: none;
+    gap: 4rem;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 2000px) {
+    .logo a, .navigation ul li a {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 2000px) {
+.hamburger-menu-mobile {
+    display: none;
+}
+.mobile-navigation {
+    display: none;
+}
+}
+/* HEADER_END */
 
 /* GRID STRUCTURE */
 .grid-homepage-container {
@@ -15,17 +85,10 @@ html, body { /* LOOK INTO DIFFERENCE */
     width: 100%;
     gap: 1rem;
     grid-template-rows: repeat(15, minmax(0, 1fr)); /*LOOK INTO EXPLINATION */
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
     padding: 10rem;
     margin: 0 auto; /* Center the container */
     max-width: 100%; /* Ensure it does not exceed viewport */ 
-}
-
-/* Apply border-box universally */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 /*___HERO_START!!___*/
@@ -257,4 +320,8 @@ html, body { /* LOOK INTO DIFFERENCE */
     grid-template-columns: repeat(6, 1fr);
 }
 /* MODULE_2_END */
+
+/* FOOTER_START */
+
+/* FOOTER_END */
 

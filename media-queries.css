@@ -1,8 +1,55 @@
 /* media-queries.css */
 
-/* MOBILE VIEW - 600px to 375px | Below 375px depricated? */
-/*___HERO_START!!___*/
+/* MOBILE VIEW - 600px to 375px | Below 375px deprecated? */
 @media (max-width: 600px) {
+/*___HEADER_MOBILE_START___*/
+    .navigation {
+        display: none;
+    }
+
+    .site-header-container {
+        padding: 0 4.5rem;
+        
+    }
+
+    .hamburger-menu-mobile { /* hamburger menu box */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 3rem;
+        height: 2.2rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .hamburger-menu-mobile-wrapper { /* hamburger menu background */
+        display: flex;
+        background-color: black;
+        padding: .5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .hamburger-menu-mobile .line { /* hamburger menu lines */
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+    }
+
+    .logo-wrapper {
+        width: auto;
+        height: 2.2rem;
+        padding: 0;
+    }
+    }
+/*___HEADER_MOBILE_END___*/
+
+/*___HERO_START___*/
     .grid-homepage-container {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(15, 1fr);
@@ -66,7 +113,7 @@
         border-color: white;
         border-style: dashed;
     }
-/*___HERO_END!!___*/
+/*___HERO_END___*/
 
 /* MODULE_1_START */
     .grid-item-4 {
@@ -110,9 +157,6 @@
     .grid-item-6 > .flex-container-10 > .module-2-element {
         width: 30rem;
         height: 10rem;
-        /* margin-left: -35rem;
-        margin-top: -14rem; */
-        /* position: fixed; */
     }
 
     .grid-item-7 {
@@ -130,7 +174,7 @@
         max-width: 100%;
         height: auto;
         transform: scale(2);
-        margin-bottom: -6rem;
+        margin-bottom: -6rem; 
     }
 
     .grid-item-7 > .flex-container-11 > .saturday-night-live,
@@ -142,7 +186,7 @@
         transform: scale(1.5);
     }
 /* MODULE_2_END */
-}   
+ 
 
 
 
